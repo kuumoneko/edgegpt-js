@@ -1,4 +1,4 @@
-# Google Bard API using node js
+# Bing AI API using node js
 
 # Install
 
@@ -40,7 +40,7 @@ test()
 ```
 
 ```
-node testing.js
+node test.js
 ```
 
 # Contributors
