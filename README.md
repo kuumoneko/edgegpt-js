@@ -45,3 +45,6 @@ node testing.js
 
 # Contributors
 
+<a href="https://github.com/kuumoneko/edgegpt-js/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kuumoneko/edgegpt-js" />
+</a>
