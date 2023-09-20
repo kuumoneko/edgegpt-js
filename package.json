@@ -1,6 +1,6 @@
 {
   "name": "bingai-js",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "BingAI API using javascript",
   "main": "index.js",
   "scripts": {
