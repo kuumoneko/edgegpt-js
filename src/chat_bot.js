@@ -19,7 +19,12 @@ class ChatBot {
         this.chatHub.once('final', ({ item }) => {
           // noinspection JSUnresolvedReference
           // console.log(item)
-          resolve(item.messages[item.messages.length - 1].text)
+          // resolve(item.messages[item.messages.length - 1].text)
+          if (item.messages && item.messages.length > 0) {
+            resolve(item.messages[item.messages.length - 1].text);
+          } else {
+            resolve("No messages available");
+          }
         })
       }
       this.chatHub.ask(prompt, mode).then()
