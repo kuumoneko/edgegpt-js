@@ -1,5 +1,9 @@
 # Bing AI API using node js
 
+## Update:
+
+> Support using `encryptedconversationsignature` from header ot fix error
+
 # Install
 
 ```
@@ -17,17 +21,14 @@ npm i bingai-js
 /**
  * test.js
  */
-const { ChatBot } = require('bingai-js');
-const { conversation_style } = require('./src/Utility');
+const { ChatBot , conversation_style } = require('bingai-js');
 
 const cookie = "Your-Cookie-U-here"
 
 const a = new ChatBot(cookie);
 
-async function test() {
+async function test(prompt) {
     await a.init();
-
-
     /**
     *   balanced : conversation_style.balanced
     *   creative : conversation_style.creative
@@ -36,7 +37,7 @@ async function test() {
     console.log( await a.ask(prompt , conversation_style.balanced))
 }
 
-test()
+test("Your-prompt");
 ```
 
 ```

@@ -1,0 +1,95 @@
+{
+  "C_Cpp.errorSquiggles": "disabled",
+
+  "workbench.colorTheme": "Discord Theme (Dark)",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+
+  "workbench.editorAssociations": {
+    "*.html": "default",
+    "*.cpp": "default",
+    "*.exe": "default",
+    "*.pyc": "default"
+  },
+  "git.enabled": true,
+  "liveServer.settings.root": "/web",
+
+  
+  "liveServer.settings.donotShowInfoMsg": true,
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+
+  "background.style": {
+    "pointer-events": "none",
+    //"position": "abandoned",
+    "z-index": "9",
+    "background-size": "cover",
+    "width": "100%",
+    "height": "100%",
+
+    "margin-left": "0%",
+    "background-position": "center",
+    "background-repeat": "repeat",
+    "opacity": 0.1
+  },
+  "problems.showCurrentInStatus": true,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+
+  "files.autoSave": "afterDelay",
+  // "background.": false,
+  "background.useFront": true,
+  "background.customImages": [
+    "https://cdn.discordapp.com/attachments/1018816847333822474/1155989390535958528/eab0ee1cb135fb8e91a10dd110cddb06.jpg?ex=6515f983&is=6514a803&hm=b489df83f4bf52fb4688c18afefc14458ef52057796b98b95790eec76ddbe890&",
+    "https://cdn.discordapp.com/attachments/1018816847333822474/1155989390535958528/eab0ee1cb135fb8e91a10dd110cddb06.jpg?ex=6515f983&is=6514a803&hm=b489df83f4bf52fb4688c18afefc14458ef52057796b98b95790eec76ddbe890&",
+    "https://cdn.discordapp.com/attachments/1018816847333822474/1155989390535958528/eab0ee1cb135fb8e91a10dd110cddb06.jpg?ex=6515f983&is=6514a803&hm=b489df83f4bf52fb4688c18afefc14458ef52057796b98b95790eec76ddbe890&"
+
+  ],
+
+  "code-runner.runInTerminal": true,
+  "code-runner.showRunCommandInExplorerContextMenu": false,
+  "code-runner.showRunCommandInEditorContextMenu": true,
+  "code-runner.showRunIconInEditorTitleMenu": true,
+  "code-runner.showStopIconInEditorTitleMenu": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordBasedSuggestions": false,
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.formatting.provider": "black",
+
+  "files.associations": {
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "*.tcc": "cpp",
+    "iomanip": "cpp",
+    "array": "cpp",
+    "deque": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "vector": "cpp",
+    "string_view": "cpp",
+    "format": "cpp",
+    "initializer_list": "cpp",
+    "ranges": "cpp",
+    "span": "cpp",
+    "stacktrace": "cpp",
+    "regex": "cpp",
+    "valarray": "cpp"
+  },
+  "spellright.language": [
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "latex"
+  ]
+}
