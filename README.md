@@ -2,7 +2,7 @@
 
 ## Update:
 
-> Support using `encryptedconversationsignature` from header ot fix error
+> Fix bug `TypeError: Cannot read property 'length' of undefined` 
 
 # Install
 
