@@ -38,7 +38,7 @@ class ChatBot {
     return new Promise((resolve) => {
       if (this.chatHub) {
         this.chatHub.once("final", ({ item }) => {
-          resolve(item.result.message);
+          resolve(item.messages[item.messages.length - 1].text);
         });
       }
       this.chatHub.ask(prompt, mode).then();
