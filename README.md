@@ -2,7 +2,7 @@
 
 ## Update:
 
-> Fix bug `TypeError: Cannot read property 'length' of undefined` 
+> Fix issue in `Any solution to prevent the bot forgot previous question? #2`
 
 # Install
 
@@ -21,23 +21,32 @@ npm i bingai-js
 /**
  * test.js
  */
-const { ChatBot , conversation_style } = require('bingai-js');
+const { ChatBot, conversation_style } = require("./index");
+const pr = require("prompt-sync")();
 
-const cookie = "Your-Cookie-U-here"
+const cookie = "Your-Cookie-U-here";
 
 const a = new ChatBot(cookie);
 
-async function test(prompt) {
-    await a.init();
-    /**
-    *   balanced : conversation_style.balanced
-    *   creative : conversation_style.creative
-    *   precise  : conversation_style.precise
-    */
-    console.log( await a.ask(prompt , conversation_style.balanced))
+async function test() {
+  await a.init();
+  var i = 0;
+  await a.chatHub.init().then(async () => {
+    while (true) {
+      const prompt = pr("You: ");
+      /**
+       *   balanced : conversation_style.balanced
+       *   creative : conversation_style.creative
+       *   precise  : conversation_style.precise
+       */
+      const res = await a.ask(prompt, conversation_style.balanced, i);
+      i++;
+      console.log(`Bot: ${res}`);
+    }
+  });
 }
 
-test("Your-prompt");
+test();
 ```
 
 ```

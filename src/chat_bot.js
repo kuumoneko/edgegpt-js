@@ -33,7 +33,7 @@ class ChatBot {
     this.chatHub = new ChatHub(conversation);
   }
 
-  async ask(prompt, mode = conversation_style.balanced) {
+  async ask(prompt, mode = conversation_style.balanced, turn ) {
     this.mode = mode;
     return new Promise((resolve) => {
       if (this.chatHub) {
@@ -41,7 +41,7 @@ class ChatBot {
           resolve(item.result.message);
         });
       }
-      this.chatHub.ask(prompt, mode).then();
+      this.chatHub.ask(prompt, mode , turn).then();
     });
   }
 

@@ -58,14 +58,9 @@ function getHeaders(COOKIE_U) {
       "azsdk-js-api-client-factory/1.0.0-beta.1 core-rest-pipeline/1.10.0 OS/Win32",
     "user-agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.50",
-    cookie: `_U=${COOKIE_U}`,
+    cookie: `SUID=A; _U=${COOKIE_U}`,
     Referer: "https://www.bing.com/search?q=Bing+AI&showconv=1",
     "Referrer-Policy": "origin-when-cross-origin",
-    // Workaround for request being blocked due to geolocation
-    // 'x-forwarded-for': '1.1.1.1', // 1.1.1.1 seems to no longer work.
-    // ...(this.options.xForwardedFor
-    //   ? { "x-forwarded-for": this.options.xForwardedFor }
-    //   : {}),
   };
 }
 
@@ -78,10 +73,11 @@ function getHeaders(COOKIE_U) {
 function createChatRequest(
   conversation,
   prompt,
-  mode = conversation_style.balanced
+  mode = conversation_style.balanced,
+  turn
 ) {
   let encryptedConversationSignature = conversation.conversationSignature;
-  let invocationId = 0;
+  let invocationId = turn;
   return {
     arguments: [
       {

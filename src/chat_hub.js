@@ -67,15 +67,15 @@ class ChatHub extends EventEmitter {
    * @param prompt
    * @returns {Promise<Function>}
    */
-  async ask(prompt, mode = conversation_style.balanced) {
+  async ask(prompt, mode = conversation_style.balanced, turn) {
     if (!this.socket || this.socket.readyState === WebSocket.CLOSED)
       await this.init();
-    var c = this.create(this.conversation, prompt, mode);
+    var c = this.create(this.conversation, prompt, mode, turn);
     this.send(c);
   }
 
-  create(conversation, prompt, mode) {
-    return createChatRequest(conversation, prompt, mode);
+  create(conversation, prompt, mode, turn) {
+    return createChatRequest(conversation, prompt, mode, turn);
   }
 
   /**
