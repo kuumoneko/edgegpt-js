@@ -1,10 +1,10 @@
-const { headers, conversation_style, getHeaders } = require("./Utility.js");
-const { ChatHub } = require("./chat_hub.js");
-const { fetch } = require("fetch-undici");
+import {  conversation_style, getHeaders } from "./Utility.js";
+import  {ChatHub} from "./chathub.js";
+import { fetch } from "fetch-undici";
 
-const { Agent } = require("undici");
+import { Agent } from "undici";
 
-class ChatBot {
+export class ChatBot {
   constructor(cookie_U) {
     this.headers = getHeaders(cookie_U);
   }
@@ -53,5 +53,3 @@ class ChatBot {
     await this.init();
   }
 }
-
-module.exports = ChatBot;

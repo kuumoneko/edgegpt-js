@@ -1,14 +1,13 @@
-const { EventEmitter } = require("events");
-const { WebSocket } = require("ws");
-const {
+import { EventEmitter } from "events";
+import { WebSocket } from "ws";
+import {
   createChatRequest,
   DELIMITER,
   getHeaders,
-  headers,
   conversation_style,
-} = require("./Utility.js");
+} from "./Utility.js";
 
-class ChatHub extends EventEmitter {
+export class ChatHub extends EventEmitter {
   constructor(conversation) {
     super();
     this.conversation = conversation;
@@ -94,4 +93,4 @@ class ChatHub extends EventEmitter {
   }
 }
 
-module.exports = { ChatHub };
+// module.exports = { ChatHub };

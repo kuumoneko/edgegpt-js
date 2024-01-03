@@ -1,5 +1,6 @@
-const crypto = require("node:crypto");
-const conversation_style = {
+import crypto from "node:crypto";
+
+export const conversation_style = {
   precise: "h3precise",
   balanced: "galileo",
   creative: "h3imaginative",
@@ -8,9 +9,7 @@ const conversation_style = {
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.41";
 
-const DELIMITER = "\x1e";
-
-const headers = getHeaders();
+export const DELIMITER = "\x1e";
 
 /**
  * Generates random IP
@@ -32,7 +31,7 @@ function genRanHex(size) {
  * gets headers for request
  * @returns Object
  */
-function getHeaders(COOKIE_U) {
+export function getHeaders(COOKIE_U) {
   return {
     accept: "application/json",
     "accept-language": "en-US,en;q=0.9",
@@ -70,7 +69,7 @@ function getHeaders(COOKIE_U) {
  * @param mode
  * @returns {function(*): {arguments: [{optionsSets, conversationId: *, source: string, conversationSignature: *, message: {messageType: string, author: string, inputMethod: string, text: *}, isStartOfSession: boolean, participant: {id: *}}], type: number, invocationId: string, target: string}}
  */
-function createChatRequest(
+export function createChatRequest(
   conversation,
   prompt,
   mode = conversation_style.balanced,
@@ -116,11 +115,3 @@ function createChatRequest(
     type: 4,
   };
 }
-
-module.exports = {
-  conversation_style,
-  headers,
-  createChatRequest,
-  DELIMITER,
-  getHeaders,
-};
