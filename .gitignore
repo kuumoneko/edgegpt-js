@@ -8,3 +8,4 @@ testing.js
 !.vscode/
 .hintrc
 !.dist/
+tst

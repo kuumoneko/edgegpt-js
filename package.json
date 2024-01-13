@@ -1,11 +1,12 @@
 {
   "type": "module",
   "name": "bingai-js",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "BingAI API using javascript",
   "main": "index.js",
   "scripts": {
-    "test": "test.js"
+    "test": "/test/index.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/kuumoneko/edgegpt-js#readme",
   "dependencies": {
+    "@types/es6-promise": "^3.3.0",
     "events": "^3.3.0",
     "fetch-undici": "^3.0.1",
     "prompt-sync": "^4.2.0",
