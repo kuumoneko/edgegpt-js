@@ -1,12 +1,12 @@
 {
   "type": "module",
   "name": "bingai-js",
-  "version": "1.7.1",
+  "version": "1.7.5-rc6",
   "description": "BingAI API using javascript",
-  "main": "index.js",
   "scripts": {
     "test": "/test/index.js",
-    "build": "tsc"
+    "build": "node ./@script/delete.js && tsc -p tsconfig.commonjs.json && tsc -p tsconfig.esm.json && node ./@script/addtsnocheck.js && node ./@script/arename.js",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",
@@ -16,18 +16,36 @@
     "Bing",
     "ai"
   ],
+  "engines": {
+    "node": ">=16.x"
+  },
+  "main": "index.cjs",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "index.cjs",
+    "@types",
+    "dist"
+  ],
   "author": "Kuumoneko",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kuumoneko/edgegpt-js/issues"
   },
-  "homepage": "https://github.com/kuumoneko/edgegpt-js#readme",
+  "homepage": "https://github.com/kuumoneko/edgegpt-js",
   "dependencies": {
     "@types/es6-promise": "^3.3.0",
+    "bingai-js": "^1.7.5-rc1",
     "events": "^3.3.0",
-    "fetch-undici": "^3.0.1",
-    "prompt-sync": "^4.2.0",
+    "node-fetch": "^3.3.2",
     "undici": "^5.25.4",
     "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@types/ws": "^8.5.10"
   }
 }

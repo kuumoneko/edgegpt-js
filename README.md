@@ -1,12 +1,14 @@
 # Bing AI API using node js
 
-## Update:
+## Update v1.7.5-rc6:
 
-> Fix issue in `Any solution to prevent the bot forgot previous question? #2`
+> Support Typescript
 
 # Install
 
 ```
+npm i bingai-js@1.7.5.-rc6
+or
 npm i bingai-js
 ```
 
@@ -17,12 +19,17 @@ npm i bingai-js
 
 # Usage
 
-```shell
-/**
- * test.js
- */
-const { ChatBot, conversation_style } = require("./index");
-const pr = require("prompt-sync")();
+```js
+// if using ESM
+import { ChatBot, conversation_style } from "bingai-js";
+import promptSync from "prompt-sync";
+
+// if using commonJS
+const { ChatBot, conversation_style } = require("bingai-js/index.cjs");
+const promptSync = require("prompt-sync");
+const pr = promptSync();
+
+const pr = promptSync();
 
 const cookie = "Your-Cookie-U-here";
 
@@ -46,11 +53,11 @@ async function test() {
   });
 }
 
-test();
+tett();
 ```
 
-```
-node test.js
+```shell
+node index.js
 ```
 
 # Contributors

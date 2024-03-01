@@ -1,5 +1,5 @@
-import { ChatBot } from "./src/chatbot.js";
-import { conversation_style } from "./src/Utility.js";
+import { ChatBot } from "./@types/chatbot.ts";
+import { conversation_style } from "./@types/ultility.ts";
 
 export {
     conversation_style,
