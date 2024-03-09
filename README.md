@@ -1,6 +1,6 @@
 # Bing AI API using node js
 
-## Update v1.7.5-rc6:
+## Update v1.7.5:
 
 > Support Typescript
 
