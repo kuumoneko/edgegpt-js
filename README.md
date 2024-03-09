@@ -7,7 +7,7 @@
 # Install
 
 ```
-npm i bingai-js@1.7.5.-rc6
+npm i bingai-js@1.7.5
 or
 npm i bingai-js
 ```
