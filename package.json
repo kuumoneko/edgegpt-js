@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "bingai-js",
-  "version": "1.7.5-rc6",
+  "version": "1.7.5",
   "description": "BingAI API using javascript",
   "scripts": {
     "test": "/test/index.js",
@@ -36,7 +36,6 @@
   "homepage": "https://github.com/kuumoneko/edgegpt-js",
   "dependencies": {
     "@types/es6-promise": "^3.3.0",
-    "bingai-js": "^1.7.5-rc1",
     "events": "^3.3.0",
     "node-fetch": "^3.3.2",
     "undici": "^5.25.4",

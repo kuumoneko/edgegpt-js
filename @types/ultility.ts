@@ -1,3 +1,4 @@
+import crypto from "crypto"
 
 export const conversation_style = {
     precise: "h3precise",
@@ -118,8 +119,8 @@ function genRanHex(size: number) {
 }
 
 export function getHeaders(cookie: string = "", referrer: string = ""): Header {
-    var accp: string = "";
-    var content_tp: string = "";
+    let accp: string = "";
+    let content_tp: string = "";
 
     if (referrer == "https://www.bing.com/search?q=Bing+AI&showconv=1") {
         accp = "application/json";

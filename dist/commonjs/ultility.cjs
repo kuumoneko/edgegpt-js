@@ -1,19 +1,19 @@
 // @ts-nocheck
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function (o, m, k, k2) {
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
     if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-        desc = { enumerable: true, get: function () { return m[k]; } };
+      desc = { enumerable: true, get: function() { return m[k]; } };
     }
     Object.defineProperty(o, k2, desc);
-}) : (function (o, m, k, k2) {
+}) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
 }));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function (o, v) {
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
     Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function (o, v) {
+}) : function(o, v) {
     o["default"] = v;
 });
 var __importStar = (this && this.__importStar) || function (mod) {
@@ -32,8 +32,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.importESmodule = exports.createChatRequest = exports.getHeaders = exports.DELIMITER = exports.conversation_style = void 0;
+const crypto_1 = __importDefault(require("crypto"));
 exports.conversation_style = {
     precise: "h3precise",
     balanced: "galileo",
@@ -46,8 +50,8 @@ function genRanHex(size) {
         .join("");
 }
 function getHeaders(cookie = "", referrer = "") {
-    var accp = "";
-    var content_tp = "";
+    let accp = "";
+    let content_tp = "";
     if (referrer == "https://www.bing.com/search?q=Bing+AI&showconv=1") {
         accp = "application/json";
         content_tp = "application/json";
@@ -74,7 +78,7 @@ function getHeaders(cookie = "", referrer = "") {
         "sec-fetch-site": "same-origin",
         "sec-ms-gec": genRanHex(64).toUpperCase(),
         "sec-ms-gec-version": "1-115.0.1866.1",
-        "x-ms-client-request-id": crypto.randomUUID(),
+        "x-ms-client-request-id": crypto_1.default.randomUUID(),
         "x-ms-useragent": "azsdk-js-api-client-factory/1.0.0-beta.1 core-rest-pipeline/1.10.0 OS/Win32",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.50",
         cookie: `SUID=A; _U=${cookie}`,
@@ -128,6 +132,6 @@ function createChatRequest(conversation, prompt, mode = exports.conversation_sty
 exports.createChatRequest = createChatRequest;
 async function importESmodule() {
     return (await import("node-fetch")).default;
-}
-exports.importESmodule = importESmodule;
+        }
+        exports.importESmodule = importESmodule;
 //# sourceMappingURL=ultility.cjs.map

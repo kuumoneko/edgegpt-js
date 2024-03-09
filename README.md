@@ -27,7 +27,8 @@ import promptSync from "prompt-sync";
 // if using commonJS
 const { ChatBot, conversation_style } = require("bingai-js/index.cjs");
 const promptSync = require("prompt-sync");
-const pr = promptSync();
+
+
 
 const pr = promptSync();
 
@@ -53,7 +54,7 @@ async function test() {
   });
 }
 
-tett();
+test();
 ```
 
 ```shell

@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+import crypto from "crypto";
 export const conversation_style = {
     precise: "h3precise",
     balanced: "galileo",
@@ -20,8 +21,8 @@ function genRanHex(size) {
         .join("");
 }
 export function getHeaders(cookie = "", referrer = "") {
-    var accp = "";
-    var content_tp = "";
+    let accp = "";
+    let content_tp = "";
     if (referrer == "https://www.bing.com/search?q=Bing+AI&showconv=1") {
         accp = "application/json";
         content_tp = "application/json";
